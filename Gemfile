@@ -8,7 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 gem 'sprockets-rails'
-
+gem 'turbolinks'
 # Full text search via PostgreSQL
 # gem 'pg_search', '~> 1.0.5'
 
