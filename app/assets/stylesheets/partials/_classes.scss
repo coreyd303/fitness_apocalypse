@@ -6,10 +6,15 @@
   padding-left: 1em;
   padding-right: 1em;
 
+  max-width: 85%;
   @include media($desktop) {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.container--content {
+  padding: 1em 2em;
 }
 
 .alert {
@@ -66,7 +71,7 @@
 }
 
 .banner {
-  background-color: $teal;
+
   margin-bottom: 2em;
   padding: 1em 0 2em 0;
   min-height: 2em;
@@ -136,7 +141,7 @@ small {
 }
 
 .course-details {
-  color: $teal;
+  // color: $teal;
   font-size: 2em;
   margin: 1em 0 .5em 0;
   font-weight: 200;
@@ -191,7 +196,7 @@ small {
 }
 
 .white {
-  color: white;
+  color: $white;
 }
 
 .extra-padding-left {
@@ -288,7 +293,7 @@ header.lesson-listing:before {
 
 .underlined {
   border-bottom: solid;
-  border-color: $purple;
+  // border-color: $purple;
   border-width: 1px;
   padding-bottom: 1em;
 }
@@ -338,15 +343,3 @@ ul.less-padding {
   padding-left: 2em;
 }
 
-.cpl-blue-block {
-  background-color: $cpl-blue !important;
-}
-
-.cpl-blue-text {
-  color: $cpl-blue;
-}
-
-.cpl-purple-text {
-  color: $cpl-purple;
-  a { color: $cpl-purple; }
-}
