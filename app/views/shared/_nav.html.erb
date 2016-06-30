@@ -1,13 +1,18 @@
+<%
+  events_current = current_page(events_path)
+  blog_current = current_page(blog_posts_path)
+%>
+
 <div class="container--nav__bar">
   <div class="row">
     <div class="fourcol nav__logo">
-      MY BIG FAT LOGO
+      <%= link_to "MY BIG FAT LOGO", root_path %>
     </div>
     <div class="eightcol last">
-      <%= link_to "Calendar", "#", class: "nav__link" %>
-      <%= link_to "Blog", "#", class: "nav__link" %>
+      <%= link_to "Calendar", events_path, class: "nav__link #{events_current}" %>
+      <%= link_to "Blog", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "Profile", "#", class: "nav__link" %>
-      <%= link_to "Sign In / Register", class: "nav__link" %>
+      <%= link_to "Sign In / Register", "#", class: "nav__link" %>
       <%= link_to "Admin", "#", class: "nav__link" %>
     </div>
   </div>

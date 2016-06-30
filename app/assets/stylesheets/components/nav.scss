@@ -1,7 +1,31 @@
-.logo__nav {
-  width: 100%;
+.nav__logo {
+  padding: 1em 0 1em 5em;
 }
 
-.nav_link {
+.container--nav__bar {
+  margin: 1em 0;
+}
+
+.nav__link {
   color: $black;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding: 0.2em 1.4em;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $white;
+  }
+}
+
+.nav__link.current {
+  border: 1.5px $forest-green solid;
+  display: inline-block;
+  padding: 0.2em 1.4em;
+  color: $forest-green;
+  font-weight: 500;
 }
