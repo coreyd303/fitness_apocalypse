@@ -12,7 +12,9 @@
       <%= link_to "Calendar", events_path, class: "nav__link #{events_current}" %>
       <%= link_to "Blog", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "Profile", "#", class: "nav__link" %>
-      <%= link_to "Sign In / Register", "#", class: "nav__link" %>
+      <%= link_to "Register", new_user_registration_path, class: "nav__link" %>
+      <%= link_to "SignIn", user_session_path, class: "nav__link" %>
+      <%= link_to "SignOut", destroy_user_session_path, method: :delete, class: "nav__link" %>
       <%= link_to "Admin", "#", class: "nav__link" %>
     </div>
   </div>

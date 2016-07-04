@@ -38,4 +38,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # For Devise setup
+  # May need further modification for letter_opener gem
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
