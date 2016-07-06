@@ -20,4 +20,11 @@ feature "User signs in" do
     sign_in_with "example@email.com", "paassword"
     expect(page).to have_content("Invalid Email or password.")
   end
+
+  scenario "then signs out" do
+    sign_in_with "example@email.com", "password"
+    expect(page).to have_content("Signed in successfully.")
+    click_link "SignOut"
+    expect(page).to have_content("Signed out successfully.")
+  end
 end
