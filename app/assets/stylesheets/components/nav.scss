@@ -16,54 +16,43 @@
 }
 
 .nav__logo--title {
-  color: $dark-blue;
+  color: $black;
   font-size: 1rem;
+  font-weight: 600;
   margin: 0;
 }
 
 .nav__logo--subtitle {
-  color: $dark-blue;
+  color: $black;
   font-size: 1rem;
   margin: 0;
 }
 
 .container--nav__bar {
-
-  // background: image-url('broken_nav.jpg');
-  // background-size: cover;
-  // background-repeat:no-repeat;
-  // // background-size:contain;
-  // background-position: center;
-  // // background-attachment: fixed;
-  // // margin-top: 2em;
   padding: 1.5em;
+}
 
-  // //Prevent blurriness with translateY centering
-  // -webkit-transform-style: preserve-3d;
-  // -moz-transform-style: preserve-3d;
-  // transform-style: preserve-3d;
+.container--nav__links {
+  padding-top: 3em;
 }
 
 .nav__link {
   color: $black;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 0.2em 1.4em;
 
   &:hover {
     text-decoration: underline;
   }
-
-  &:active {
-    color: $grey;
-  }
 }
 
 .nav__link.current {
-  border: 1.5px $royal-blue solid;
+  border: 2px $super-blue solid;
+  border-radius: 5px;
   display: inline-block;
   padding: 0.2em 1.4em;
   color: $black;
-  font-weight: 500;
+  font-weight: 600;
 }
