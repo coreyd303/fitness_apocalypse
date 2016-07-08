@@ -2,6 +2,7 @@
   events_current = current_page(events_path)
   blog_current = current_page(blog_posts_path)
   home_current = current_page(root_path)
+  login_current = current_page(login_path)
 %>
 
 <div class="container--nav__bar">
@@ -28,16 +29,14 @@
       <% end %>
       <%= link_to "KNOWLEDGE", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "PROFILE", "#", class: "nav__link" %>
-      <%= link_to "SIGNIN / REGISTER", "#", class: "nav__link" %>
+      <% if current_user %>
+        <%= link_to "SIGNOUT", destroy_user_session_path, method: :delete, class: "nav__link" %>
+      <% else %>
+        <%= link_to "SIGNIN / REGISTER", login_path, class: "nav__link #{login_current}" %>
+      <% end %>
+
       <%= link_to "ADMIN", "#", class: "nav__link" %>
 
-
-
-
-      <%= link_to "Register", new_user_registration_path, class: "nav__link" %>
-      <%= link_to "SignIn", user_session_path, class: "nav__link" %>
-      <%= link_to "SignOut", destroy_user_session_path, method: :delete, class: "nav__link" %>
-      <%= link_to "Admin", "#", class: "nav__link" %>
 
     </div>
   </div>
