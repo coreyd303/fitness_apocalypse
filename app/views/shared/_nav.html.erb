@@ -20,15 +20,25 @@
       <% end %>
     </div>
     <div class="eightcol last">
-      <%# if current_user %>
+
+      <% if current_user %>
         <%= link_to "CALENDAR", events_path, class: "nav__link #{events_current}" %>
-      <%# else %>
+      <% else %>
         <%= link_to "HOME", root_path, class: "nav__link #{home_current}" %>
-      <%# end %>
+      <% end %>
       <%= link_to "KNOWLEDGE", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "PROFILE", "#", class: "nav__link" %>
       <%= link_to "SIGNIN / REGISTER", "#", class: "nav__link" %>
       <%= link_to "ADMIN", "#", class: "nav__link" %>
+
+
+
+
+      <%= link_to "Register", new_user_registration_path, class: "nav__link" %>
+      <%= link_to "SignIn", user_session_path, class: "nav__link" %>
+      <%= link_to "SignOut", destroy_user_session_path, method: :delete, class: "nav__link" %>
+      <%= link_to "Admin", "#", class: "nav__link" %>
+
     </div>
   </div>
 </div>
