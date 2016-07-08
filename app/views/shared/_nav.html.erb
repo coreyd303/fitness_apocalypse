@@ -1,21 +1,43 @@
 <%
   events_current = current_page(events_path)
   blog_current = current_page(blog_posts_path)
+  home_current = current_page(root_path)
+  login_current = current_page(login_path)
 %>
 
 <div class="container--nav__bar">
   <div class="row">
     <div class="fourcol nav__logo">
-      <%= link_to "MY BIG FAT LOGO", root_path %>
+      <%= link_to root_path do %>
+        <%= image_tag "pc.png", alt: "predator camp PC logo", class: "nav__logo--image" %>
+        <div class="nav__logo--title-box">
+          <p class="nav__logo--title">
+            Predator Camp
+          </p>
+          <p class="nav__logo--subtitle">
+            Conditioning, Knowlege, Preparation
+          </p>
+        </div>
+      <% end %>
     </div>
-    <div class="eightcol last">
-      <%= link_to "Calendar", events_path, class: "nav__link #{events_current}" %>
-      <%= link_to "Blog", blog_posts_path, class: "nav__link #{blog_current}" %>
-      <%= link_to "Profile", "#", class: "nav__link" %>
-      <%= link_to "Register", new_user_registration_path, class: "nav__link" %>
-      <%= link_to "SignIn", user_session_path, class: "nav__link" %>
-      <%= link_to "SignOut", destroy_user_session_path, method: :delete, class: "nav__link" %>
-      <%= link_to "Admin", "#", class: "nav__link" %>
+    <div class="eightcol container--nav__links last">
+
+      <% if current_user %>
+        <%= link_to "CALENDAR", events_path, class: "nav__link #{events_current}" %>
+      <% else %>
+        <%= link_to "HOME", root_path, class: "nav__link #{home_current}" %>
+      <% end %>
+      <%= link_to "KNOWLEDGE", blog_posts_path, class: "nav__link #{blog_current}" %>
+      <%= link_to "PROFILE", "#", class: "nav__link" %>
+      <% if current_user %>
+        <%= link_to "SIGNOUT", destroy_user_session_path, method: :delete, class: "nav__link" %>
+      <% else %>
+        <%= link_to "SIGNIN / REGISTER", login_path, class: "nav__link #{login_current}" %>
+      <% end %>
+
+      <%= link_to "ADMIN", "#", class: "nav__link" %>
+
+
     </div>
   </div>
 </div>

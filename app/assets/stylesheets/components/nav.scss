@@ -1,43 +1,58 @@
 .nav__logo {
   padding: 1em 0 1em 5em;
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav__logo--image {
+  height: 4em;
+  width: auto;
+}
+
+.nav__logo--title-box {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+.nav__logo--title {
+  color: $black;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav__logo--subtitle {
+  color: $black;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .container--nav__bar {
-  background: image-url('broken_nav.jpg');
-  background-size: cover;
-  background-repeat:no-repeat;
-  // background-size:contain;
-  background-position: center;
-  // background-attachment: fixed;
-  // margin-top: 2em;
   padding: 1.5em;
+}
 
-  //Prevent blurriness with translateY centering
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+.container--nav__links {
+  padding-top: 3em;
 }
 
 .nav__link {
-  color: $white;
+  color: $black;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 0.2em 1.4em;
 
   &:hover {
     text-decoration: underline;
   }
-
-  &:active {
-    color: $grey;
-  }
 }
 
 .nav__link.current {
-  border: 1.5px $wicked-green solid;
+  border: 2px $super-blue solid;
+  border-radius: 5px;
   display: inline-block;
   padding: 0.2em 1.4em;
-  color: $wicked-green;
-  font-weight: 500;
+  color: $black;
+  font-weight: 600;
 }
