@@ -27,7 +27,7 @@
       <% else %>
         <%= link_to "HOME", root_path, class: "nav__link #{home_current}" %>
       <% end %>
-      <%= link_to "KNOWLEDGE", blog_posts_path, class: "nav__link #{blog_current}" %>
+      <%= link_to "BLOG", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "PROFILE", "#", class: "nav__link" %>
       <% if current_user %>
         <%= link_to "SIGNOUT", destroy_user_session_path, method: :delete, class: "nav__link" %>

@@ -71,7 +71,6 @@ group :development, :test do
   gem 'pry-nav'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  # gem 'sunspot_solr'
   gem 'awesome_print', require: 'ap'
   gem 'rspec-rails', '~> 3.0'
   gem 'bullet'
