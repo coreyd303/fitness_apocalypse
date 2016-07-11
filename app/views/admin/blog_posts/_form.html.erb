@@ -1,0 +1,32 @@
+<%= form_for [:admin, @blog_post ] do |f| %>
+  <%= f.hidden_field, :user_id, value: current_user.id %>
+
+  <div class="fieldset">
+    <%= f.label :title, "Title this post" %>
+    <%= f.text_box :title %>
+  </div>
+
+  <div class="row">
+    <div class="fieldset">
+      <%= f.label :pub_status, "Set publication status for this post" %><span class="required"></span>
+      <%= f.select :pub_status, PUB_STATS, @blog_post.pub_status %>
+    </div>
+
+    <div class="fieldset">
+      <%= f.label :featured, "Feature this post?" %>
+      <%= f.checkbox :featured, checked: @blog_post.featured %>
+    </div>
+  </div>
+
+  <div class="fieldset">
+    <%= f.label :summary, "Write a summary / tag line for this post" %>
+    <%= f.text_box :summary %>
+  </div>
+
+  <div class="fieldset">
+    <%= f.label :body %>
+    <%= f.cktext_area :body %>
+  </div>
+<% end %>
+
+<% javascript_include_tag Ckeditor.cdn_url %>
