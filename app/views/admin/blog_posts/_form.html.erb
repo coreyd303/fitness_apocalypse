@@ -1,32 +1,35 @@
-<%= form_for [:admin, @blog_post ] do |f| %>
-  <%= f.hidden_field, :user_id, value: current_user.id %>
+<%= form_for [:admin, @blog ] do |f| %>
 
-  <div class="fieldset">
-    <%= f.label :title, "Title this post" %>
-    <%= f.text_box :title %>
-  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <fieldset>
+    <%= f.label :title, "Title this post *", class: "form_label" %>
+    <%= f.text_field :title, class: "form_field" %>
+  </fieldset>
 
   <div class="row">
-    <div class="fieldset">
-      <%= f.label :pub_status, "Set publication status for this post" %><span class="required"></span>
-      <%= f.select :pub_status, PUB_STATS, @blog_post.pub_status %>
-    </div>
+    <fieldset class="sixcol">
+      <%= f.label :pub_status, "Set publication status for this post *" %>
+      <%= f.select :pub_status, options_for_select(Constant::PUB_OPTIONS), selected: @blog.pub_status %>
+    </fieldset>
 
-    <div class="fieldset">
+    <fieldset class="sixcol last">
       <%= f.label :featured, "Feature this post?" %>
-      <%= f.checkbox :featured, checked: @blog_post.featured %>
-    </div>
+      <%= f.check_box :featured, checked: @blog.featured %><span class="note padded">Yes feature this post!</span>
+    </fieldset>
   </div>
 
-  <div class="fieldset">
-    <%= f.label :summary, "Write a summary / tag line for this post" %>
-    <%= f.text_box :summary %>
-  </div>
+  <fieldset>
+    <%= f.label :summary, "Write a summary / tag line for this post *" %>
+    <%= f.text_field :summary %>
+  </fieldset>
 
-  <div class="fieldset">
-    <%= f.label :body %>
+  <fieldset>
+    <%= f.label :body, "Body *" %>
     <%= f.cktext_area :body %>
-  </div>
+  </fieldset>
+
+  <%= f.submit %>
 <% end %>
 
 <% javascript_include_tag Ckeditor.cdn_url %>

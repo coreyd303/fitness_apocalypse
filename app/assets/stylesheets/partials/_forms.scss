@@ -3,14 +3,14 @@ fieldset {
 }
 
 label {
-  color: $teal;
+  color: $super-blue;
   font-size: 1.5em;
   margin-bottom: .5em;
   display: block;
 }
 
 label.plain {
-  color: $dark-grey;
+  color: $grey;
   font-size: 1em;
   margin-bottom: .5em;
   display: inline-block;
@@ -19,7 +19,7 @@ label.plain {
 
 .required:after {
   content: " *";
-  color: $teal;
+  color: $super-blue;
   font-weight: bold;
 }
 
@@ -40,7 +40,7 @@ textarea {
   height: 200px;
   font-size: 14px;
   padding: 0.5rem;
-  border: 1px solid $light-grey;
+  border: 1px solid $grey;
   background: $white;
 }
 
@@ -52,7 +52,7 @@ textarea {
 
 button, input[type="submit"], .btn {
   display: inline-block;
-  background-color: $purple;
+  background-color: $dark-purple;
   border: 3px solid $white;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 5px 0px;
@@ -76,28 +76,12 @@ button, input[type="submit"], .btn {
     padding: 6px 40px;
   }
 
-  &.small-lesson-button {
-    min-width: 0;
-    height: 35px;
-    padding: 6px 40px;
-    position: relative;
-    left: 0.6em;
-  }
-
-  &.spanish-small {
-    font-size: 10px;
-  }
-
   &.btn-grey {
     background-color: $grey;
   }
 
-  &.btn-mustard {
-    background-color: $blind-man-mustard;
-  }
-
   &.btn-blue {
-    background-color: $teal;
+    background-color: $super-blue;
   }
 }
 

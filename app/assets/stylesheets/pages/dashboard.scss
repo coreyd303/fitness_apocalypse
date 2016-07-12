@@ -1,0 +1,16 @@
+.nav--block {
+  margin-bottom: 2em;
+}
+
+.block {
+  text-align: center;
+  border: 4px $ocean-blue solid;
+  border-radius: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: $ocean-blue;
+}
+
+.block:hover {
+  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}

@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :wods, only: :show
 
   namespace :admin do
-    resources :dashboard, only: :index
+    root 'dashboard#index'
+    resources :dashboard
     resources :blog_posts, except: :destroy
+    resources :wods, except: :destroy
   end
 end

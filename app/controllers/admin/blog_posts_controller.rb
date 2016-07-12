@@ -15,6 +15,7 @@ module Admin
       else
         flash[:alert] = "Blog post could not be created."
         render :new
+      end
     end
 
     def edit
