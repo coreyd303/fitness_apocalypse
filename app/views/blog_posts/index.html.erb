@@ -1,38 +1,13 @@
-<div class="container">
-  <div class="row">
-    <% @blogs.each_with_index do |b, i| %>
-      <% if i % 2 == 0 %>
-        <div class="sixcol"><%= b.title %></div>
-      <% else %>
-        <div class="sixcol last"><%= b.title %></div>
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+  <% @blogs.each_with_index do |blog, i| %>
+    <div class="box--blog col5">
+      <%= link_to blog_post_path(blog) do %>
+        <div class="carbon--boss">
+          <p class="blog--title"><%= blog.title %></p>
+          <p class="blog--author">By: <%= blog.author %></p>
+          <p class="blog--summary"><%= blog.summary %></p>
+        </div>
       <% end %>
-    <% end %>
-  </div>
-</div>
-
-
-<div class="grid">
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--width2 grid-item--height2"></div>
-  <div class="grid-item grid-item--height3"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item grid-item--width3"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item grid-item--width2 grid-item--height3"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--width2 grid-item--height2"></div>
-  <div class="grid-item grid-item--width2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height3"></div>
-  <div class="grid-item grid-item--height2"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item grid-item--height2"></div>
+    </div>
+  <% end %>
 </div>

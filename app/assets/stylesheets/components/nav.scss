@@ -16,14 +16,14 @@
 }
 
 .nav__logo--title {
-  color: $white;
+  color: $black;
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
 }
 
 .nav__logo--subtitle {
-  color: $white;
+  color: $grey;
   font-size: 1rem;
   margin: 0;
 }
@@ -37,7 +37,7 @@
 }
 
 .nav__link {
-  color: $white;
+  color: $black;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -53,6 +53,6 @@
   border-radius: 5px;
   display: inline-block;
   padding: 0.2em 1.4em;
-  color: $super-blue;
+  color: $ocean-blue;
   font-weight: 600;
 }

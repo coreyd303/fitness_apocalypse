@@ -26,6 +26,7 @@ gem 'rolify'
 gem 'bourbon'
 gem 'neat'
 
+gem 'masonry-rails'
 # Redis for Sidekiq
 # gem 'redis'
 # gem 'redis-namespace'

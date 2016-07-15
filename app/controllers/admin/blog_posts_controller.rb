@@ -1,17 +1,18 @@
 module Admin
   class BlogPostsController < BaseController
     def index
-      @blogs = BlogPosts.all
+      @blog_posts = BlogPost.all
     end
 
     def new
-      @blog = BlogPost.new
+      @blog_post = BlogPost.new
     end
 
     def create
-      if @blog = BlogPost.create(blog_params)
+      @blog_post = BlogPost.create(blog_params)
+      if @blog_post.save
         flash[:notice] = "Blog post was create."
-        render :edit
+        redirect_to edit_admin_blog_post_path(@blog_post)
       else
         flash[:alert] = "Blog post could not be created."
         render :new
@@ -19,14 +20,14 @@ module Admin
     end
 
     def edit
-      @blog = BlogPost.find(params[:id])
+      @blog_post = BlogPost.find(params[:id])
     end
 
     def update
-      @blog = BlogPost.find(params[:id])
-      if @blog.update(blog_params)
+      @blog_post = BlogPost.find(params[:id])
+      if @blog_post.update(blog_params)
         flash[:notice] = "Success, blog post was updated."
-        render :edit
+        redirect_to edit_admin_blog_post_path(@blog_post)
       else
         flash[:alert] = "Blog could not be updated."
         render :edit
