@@ -3,8 +3,9 @@
   blog_current = current_page(blog_posts_path)
   home_current = current_page(root_path)
   login_current = current_page(login_path)
-  admin_current = current_page(admin_dashboard_index_path)
+  admin_current = current_page(admin_dashboard_index_path) || current_page(admin_blog_posts_path) || (admin_root_path)
 %>
+
 
 <div class="container--nav__bar">
   <div class="row">

@@ -2,12 +2,20 @@
 <html>
   <head>
     <%= render "shared/meta_tags" %>
+    <!-- <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script> -->
+    <!-- <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script> -->
+
   </head>
   <body>
-    <%= render "shared/header" %>
-    <%= render "shared/flashes" %>
-    <div class="container--content">
-      <%= yield %>
+    <div id="background">
+      <div class="container">
+        <%= render "shared/header" %>
+      </div>
+      <%= render "shared/flashes" %>
+      <div class="container--content">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
+

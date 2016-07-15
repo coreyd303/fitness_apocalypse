@@ -4,19 +4,20 @@
     <%= render "shared/meta_tags" %>
   </head>
   <body>
-    <div class="container">
-      <%= render "shared/header" %>
-    </div>
-
-    <main class="container">
-      <%= render "shared/flashes" %>
-      <div class="container nav--block">
-        <%= render "shared/admin/navblock" %>
-      </div>
+    <div id="background--admin">
       <div class="container">
-        <%= yield %>
+        <%= render "shared/header" %>
       </div>
-    </main>
 
+      <main class="container">
+        <%= render "shared/flashes" %>
+        <!-- <div class="nav--block"> -->
+          <%= render "shared/admin/navblock" %>
+        <!-- </div> -->
+        <div class="container">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
