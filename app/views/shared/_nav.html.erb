@@ -3,7 +3,9 @@
   blog_current = current_page(blog_posts_path)
   home_current = current_page(root_path)
   login_current = current_page(login_path)
+  admin_current = current_page(admin_dashboard_index_path) || current_page(admin_blog_posts_path) || (admin_root_path)
 %>
+
 
 <div class="container--nav__bar">
   <div class="row">
@@ -27,7 +29,7 @@
       <% else %>
         <%= link_to "HOME", root_path, class: "nav__link #{home_current}" %>
       <% end %>
-      <%= link_to "KNOWLEDGE", blog_posts_path, class: "nav__link #{blog_current}" %>
+      <%= link_to "BLOG", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "PROFILE", "#", class: "nav__link" %>
       <% if current_user %>
         <%= link_to "SIGNOUT", destroy_user_session_path, method: :delete, class: "nav__link" %>
@@ -35,7 +37,7 @@
         <%= link_to "SIGNIN / REGISTER", login_path, class: "nav__link #{login_current}" %>
       <% end %>
 
-      <%= link_to "ADMIN", "#", class: "nav__link" %>
+      <%= link_to "ADMIN", admin_dashboard_index_path, class: "nav__link" %>
 
 
     </div>

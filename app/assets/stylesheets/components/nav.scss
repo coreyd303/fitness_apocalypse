@@ -1,5 +1,5 @@
 .nav__logo {
-  padding: 1em 0 1em 5em;
+  padding: 1em 0 1em 0em;
   a {
     text-decoration: none;
   }
@@ -23,7 +23,7 @@
 }
 
 .nav__logo--subtitle {
-  color: $black;
+  color: $grey;
   font-size: 1rem;
   margin: 0;
 }
@@ -40,7 +40,7 @@
   color: $black;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.2em 1.4em;
 
   &:hover {
@@ -53,6 +53,6 @@
   border-radius: 5px;
   display: inline-block;
   padding: 0.2em 1.4em;
-  color: $black;
+  color: $ocean-blue;
   font-weight: 600;
 }

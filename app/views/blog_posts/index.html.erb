@@ -1,0 +1,13 @@
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+  <% @blogs.each_with_index do |blog, i| %>
+    <div class="box--blog col5">
+      <%= link_to blog_post_path(blog) do %>
+        <div class="carbon--boss">
+          <p class="blog--title"><%= blog.title %></p>
+          <p class="blog--author">By: <%= blog.author %></p>
+          <p class="blog--summary"><%= blog.summary %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

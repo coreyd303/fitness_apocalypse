@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
+
 # Base set of gems
 gem 'rails', '4.2.5'
 gem 'pg'
@@ -24,6 +26,7 @@ gem 'rolify'
 gem 'bourbon'
 gem 'neat'
 
+gem 'masonry-rails'
 # Redis for Sidekiq
 # gem 'redis'
 # gem 'redis-namespace'
@@ -71,7 +74,6 @@ group :development, :test do
   gem 'pry-nav'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  # gem 'sunspot_solr'
   gem 'awesome_print', require: 'ap'
   gem 'rspec-rails', '~> 3.0'
   gem 'bullet'

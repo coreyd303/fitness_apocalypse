@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+10.times do 
+  BlogPost.create(title: "Here is a blog",
+                  body: "Zombies reversus ab inferno, nam malum cerebro.
+                          De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia?
+                          De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo
+                          monstra adventus vultus comedat cerebella viventium. Qui offenderit
+                          rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem.
+                          Search for solum oculi eorum defunctis cerebro. Nescio an Undead zombies.
+                          Sicut malus movie horror.",
+                  summary: "Zombies reversus ab inferno, nam malum cerebro.")
+end

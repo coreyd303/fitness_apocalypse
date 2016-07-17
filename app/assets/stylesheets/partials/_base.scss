@@ -4,15 +4,43 @@
 }
 
 body {
-  background-color: $white;
-  color: $black;
+  color: $white;
   padding: 0;
   margin: 0;
 }
 
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: url('carbon.png');
+    background: $white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 1;
+    filter:alpha(opacity=80);
+}
+
+#background--admin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('carbon.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  opacity: 1;
+  filter:alpha(opacity=80);
+}
+
 a {
   text-decoration: none;
-  color: $purple;
+  color: $dark-purple;
 }
 
 a:hover {
@@ -24,7 +52,7 @@ a.inverted {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $teal;
+  color: $super-blue;
 }
 
 h1 {
