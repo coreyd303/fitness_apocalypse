@@ -4,8 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  # has_one :profile
-
-  enum role: [:bow, :rifle, :muzzleloader]
+  HUNTER_CONSTANTS = ["Rifle", "Archery", "Muzzleloader", "Spear"]
 
 end

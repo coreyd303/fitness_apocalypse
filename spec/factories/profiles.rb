@@ -6,7 +6,7 @@ FactoryGirl.define do
     email Faker::Internet.email
     age Faker::Number.number(2)
     yearshunting Faker::Number.number(1)
-    huntingstyle Faker::Number.between(0, 2)
+    huntingstyle User::HUNTER_CONSTANTS.sample
     user_id Faker::Number.number(2)
   end
 end
