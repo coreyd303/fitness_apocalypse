@@ -1,4 +1,4 @@
-<%= form_for [:admin, @blog ] do |f| %>
+<%= form_for [:admin, @blog_post ] do |f| %>
 
   <%= f.hidden_field :user_id, value: current_user.id %>
 
@@ -10,12 +10,12 @@
   <div class="row">
     <fieldset class="sixcol">
       <%= f.label :pub_status, "Set publication status for this post *" %>
-      <%= f.select :pub_status, options_for_select(Constant::PUB_OPTIONS), selected: @blog.pub_status %>
+      <%= f.select :pub_status, options_for_select(BlogPost::PUB_OPTIONS), selected: @blog_post.pub_status %>
     </fieldset>
 
     <fieldset class="sixcol last">
       <%= f.label :featured, "Feature this post?" %>
-      <%= f.check_box :featured, checked: @blog.featured %><span class="note padded">Yes feature this post!</span>
+      <%= f.check_box :featured, checked: @blog_post.featured %><span class="note padded">Yes feature this post!</span>
     </fieldset>
   </div>
 
@@ -29,7 +29,9 @@
     <%= f.cktext_area :body %>
   </fieldset>
 
+
   <%= f.submit %>
+
 <% end %>
 
-<% javascript_include_tag Ckeditor.cdn_url %>
+
