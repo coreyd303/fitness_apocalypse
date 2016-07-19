@@ -16,6 +16,8 @@ class BlogPost < ActiveRecord::Base
 
   validates :title, :summary, :body, presence: :true
 
+  PUB_OPTIONS = [["Publish", "p"], ["Draft", "d"], ["Archive", "a"]]
+
   def author
     if user.try(:profile)
       user.profile.first_name + " " + user.profile.last_name
