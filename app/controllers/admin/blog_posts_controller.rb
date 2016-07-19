@@ -37,7 +37,7 @@ module Admin
     private
 
     def blog_params
-      params.require(:blog_post).permit(:title, :user_id, :body, :summary)
+      params.require(:blog_post).permit(:title, :user_id, :body, :summary, :pub_status)
     end
   end
 end

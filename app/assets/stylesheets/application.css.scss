@@ -18,6 +18,7 @@
  *= require 'masonry/infinitescroll'
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
+ *= require 'bootstrap-datepicker'
  */
 
 @import "bourbon";
@@ -39,3 +40,5 @@
 @import "pages/home";
 @import "pages/blog";
 @import "pages/dashboard";
+
+@import "bootstrap";

@@ -1,4 +1,4 @@
-10.times do 
+10.times do
   BlogPost.create(title: "Here is a blog",
                   body: "Zombies reversus ab inferno, nam malum cerebro.
                           De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia?
@@ -9,3 +9,11 @@
                           Sicut malus movie horror.",
                   summary: "Zombies reversus ab inferno, nam malum cerebro.")
 end
+
+3.times do
+  Wod.create(title: "Do hard things!",
+             duration: "30 mins",
+             workout_type: "HARD!",
+             workout:      "DO IT DO IT NOW DO IT! JUST DO IT!")
+end
+

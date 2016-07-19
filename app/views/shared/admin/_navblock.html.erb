@@ -1,13 +1,31 @@
+<%
+  # events_current = current_page(events_path)
+  blog_current = current_page(blog_posts_path)
+  wod_current = current_page(admin_wods_index_path)
+%>
+
 <div class="container">
   <div class="row">
-    <div class="block threecol">
-      <%= link_to admin_dashboard_index_path do %>
-        <%= image_tag "blog-icon.png", alt: "blog icon", class: "admin--nav__icon" %>
+    <div class="threecol">
+      <div class="block">
+        <%= link_to admin_dashboard_index_path do %>
+          <%= image_tag "blog-icon.png", alt: "blog icon", class: "admin--nav__icon" %>
+        <% end %>
+      </div>
+      <% if blog_current %>
+        <%= link_to "New Post", new_admin_blog_post_path, class: "btn dashboard" %>
       <% end %>
     </div>
 
-    <div class="block threecol">
-      <%= image_tag "wod-icon.png", alt: "blog icon", class: "admin--nav__icon" %>
+    <div class="threecol">
+      <div class="block">
+        <%= link_to admin_wods_index_path do %>
+          <%= image_tag "wod-icon.png", alt: "blog icon", class: "admin--nav__icon" %>
+        <% end %>
+      </div>
+      <% if wod_current %>
+        <%= link_to "New WOD", new_admin_wod_path, class: "btn dashboard" %>
+      <% end %>
     </div>
 
     <div class="block threecol">

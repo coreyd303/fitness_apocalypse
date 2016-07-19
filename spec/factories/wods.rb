@@ -13,13 +13,13 @@
 #  pub_status   :string
 #
 
-class Wod < ActiveRecord::Base
-  validates :title,
-            :duration,
-            :workout_type,
-            :workout,
-            :workout_date,
-            :pub_status, presence: true
-
-  WORKOUT_TYPES = [ "Strength", "MetCon", "Run / RuckRun", "Dry Fire", "Live Fire", "Hero" ]
+FactoryGirl.define do
+  factory(:wod) do
+    title  "my WOD"
+    duration "30mins"
+    workout_type "MetCon"
+    workout "GO DO THINGS NOW!"
+    workout_date "7/7/07"
+    pub_status "P"
+  end
 end

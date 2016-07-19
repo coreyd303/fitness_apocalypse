@@ -10,7 +10,7 @@
   <div class="row">
     <fieldset class="sixcol">
       <%= f.label :pub_status, "Set publication status for this post *" %>
-      <%= f.select :pub_status, options_for_select(BlogPost::PUB_OPTIONS), selected: @blog_post.pub_status %>
+      <%= f.select :pub_status, options_for_select(Constant::PUB_OPTIONS), selected: @blog_post.pub_status %>
     </fieldset>
 
     <fieldset class="sixcol last">

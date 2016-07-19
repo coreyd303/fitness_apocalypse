@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719183640) do
+ActiveRecord::Schema.define(version: 20160719212200) do
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
@@ -94,12 +94,14 @@ ActiveRecord::Schema.define(version: 20160719183640) do
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
 
   create_table "wods", force: :cascade do |t|
-    t.integer  "duration"
+    t.string   "duration"
     t.string   "workout_type"
     t.text     "workout"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.string   "workout_date"
+    t.string   "pub_status"
   end
 
 end

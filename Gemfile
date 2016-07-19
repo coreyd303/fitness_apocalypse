@@ -53,6 +53,10 @@ gem 'ckeditor'
 # Local time helper library
 # gem 'local_time'
 
+# datepicker for forms
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap-datepicker-rails'
+
 # integrate chosen library
 # gem 'select2-rails'
 
