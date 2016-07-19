@@ -18,3 +18,20 @@
   font-size: 2rem;
   color: grey;
 }
+
+.container--daily__wod {
+  text-align: center;
+  padding: 1em;
+  border: 3px solid #61F700;
+  border-radius: 15px;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-left: 170px;
+  margin-right: 170px;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  .title {
+    font-weight: 600;
+  }
+}
