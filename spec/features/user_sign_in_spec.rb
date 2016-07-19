@@ -24,7 +24,7 @@ feature "User signs in" do
   scenario "then signs out" do
     sign_in_with "example@email.com", "password"
     expect(page).to have_content("Signed in successfully.")
-    click_link "SignOut"
+    click_link "SIGNOUT"
     expect(page).to have_content("Signed out successfully.")
   end
 end

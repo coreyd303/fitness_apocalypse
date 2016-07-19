@@ -149,6 +149,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    masonry-rails (0.2.4)
+      railties
     metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (3.0)
@@ -325,6 +327,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   letter_opener
+  masonry-rails
   mocha
   neat
   paperclip (~> 4.3)
@@ -345,5 +348,8 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.2.3p173
+
 BUNDLED WITH
-   1.11.2
+   1.12.5
