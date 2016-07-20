@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712185912) do
+ActiveRecord::Schema.define(version: 20160720021420) do
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
@@ -48,7 +48,10 @@ ActiveRecord::Schema.define(version: 20160712185912) do
     t.string   "huntingstyle"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
   end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
