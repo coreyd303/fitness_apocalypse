@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 20160712185912) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
+  create_table "profiles", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "age"
+    t.integer  "yearshunting"
+    t.string   "huntingstyle"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -50,18 +60,6 @@ ActiveRecord::Schema.define(version: 20160712185912) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
-
-ActiveRecord::Schema.define(version: 20160712034910) do
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.integer  "age"
-    t.integer  "yearshunting"
-    t.string   "huntingstyle"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
