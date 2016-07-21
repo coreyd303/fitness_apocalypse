@@ -265,6 +265,8 @@ GEM
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
+    simple_calendar (2.1.5)
+      rails (>= 3.0)
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -350,6 +352,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   rubocop
   sass-rails (~> 5.0)
+  simple_calendar (~> 2.0)
   simplecov
   sprockets-rails
   sqlite3

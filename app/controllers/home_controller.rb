@@ -5,6 +5,6 @@ class HomeController < BaseController
       @wod = Wod.find_by(workout_date: date_to_string)
     end
 
-    @rest = "Rest and Recover today, if you're tired, relax, otherwise you can do a light recovery walk, strech, or ride."
+    @rest = Wod::REST_DAY
   end
 end

@@ -1,0 +1,29 @@
+.simple-calendar {
+  color: $super-blue;
+
+  .table {
+    tbody {
+      tr {
+        th {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+td.day {
+  color: $ocean-blue;
+  padding-left: 1.5em;
+  height: 145px;
+  width: 6em;
+}
+
+.calendar--link {
+  padding-top: 1em;
+  padding-left: 1em;
+  a {
+    color: $dark-purple;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="container wod--container">
+  <div class="wod--title">
+    <%= @wod.title %>
+  </div>
+  <div class="wod--container__detail">
+    <p class="wod--detail__date"><%= @wod.workout_date %></p>
+    <p class="wod--detail__duration">Duration: <%= @wod.duration %> | <%= @wod.workout_type %></p>
+    <p class="wod--body"><%= raw @wod.workout %></p>
+  </div>
+</div>

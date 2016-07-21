@@ -11,6 +11,7 @@
 #  title        :string
 #  workout_date :string
 #  pub_status   :string
+#  start_time   :datetime
 #
 
 require "rails_helper"
@@ -54,5 +55,18 @@ describe Wod do
       @wod.pub_status = ""
       expect(@wod).to_not be_valid
     end
+  end
+
+  it "convert workout_date to start_time" do
+    wod = Wod.create( title: "A wod",
+                      duration: "1min",
+                      workout_type: "Strength",
+                      workout: "Do things",
+                      workout_date: "07/07/2007",
+                      pub_status: "P" )
+
+    expect(wod.start_time).to eq(nil)
+    wod.convert_to_start_time
+    expect(wod.start_time).to eq("2007-07-07".to_date)
   end
 end

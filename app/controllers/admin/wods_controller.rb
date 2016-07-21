@@ -10,6 +10,7 @@ module Admin
 
     def create
       @wod = Wod.new(wod_params)
+      @wod.convert_to_start_time
       if @wod.save
         flash[:notice] = "Your new WOD was created!"
         redirect_to edit_admin_wod_path(@wod)
@@ -25,6 +26,7 @@ module Admin
 
     def update
       @wod = Wod.find(params[:id])
+      @wod.convert_to_start_time
       if @wod.update(wod_params)
         flash[:notice] = "This WOD was updated!"
         redirect_to edit_admin_wod_path(@wod)
@@ -37,7 +39,9 @@ module Admin
     private
 
     def wod_params
-      params.require(:wod).permit(:title, :pub_status, :workout_date, :duration, :workout_type, :workout)
+      params.require(:wod).permit(:title, :pub_status, :workout_date, :duration, :workout_type, :workout, :start_time)
     end
+
+
   end
 end

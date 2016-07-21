@@ -14,6 +14,8 @@ end
   Wod.create(title: "Do hard things!",
              duration: "30 mins",
              workout_type: "HARD!",
-             workout:      "DO IT DO IT NOW DO IT! JUST DO IT!")
+             workout:      "DO IT DO IT NOW DO IT! JUST DO IT!",
+             workout_date: Time.zone.now.strftime("%m/%d/%Y"),
+             pub_status: "P")
 end
 

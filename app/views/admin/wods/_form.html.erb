@@ -10,14 +10,14 @@
     <div class="sixcol">
       <fieldset>
         <%= f.label "Select what type of workout this is? *" %>
-        <%= f.select :workout_type, options_for_select(Wod::WORKOUT_TYPES), class: "c-choice" %>
+        <%= f.select :workout_type, options_for_select(Wod::WORKOUT_TYPES) %>
       </fieldset>
     </div>
 
     <div class="sixcol last">
       <fieldset>
         <%= f.label "Select a Pub Status for this workout *" %>
-        <%= f.select :pub_status, options_for_select(Constant::PUB_OPTIONS), class: "c-field" %>
+        <%= f.select :pub_status, options_for_select(Constant::PUB_OPTIONS) %>
       </fieldset>
     </div>
   </div>
@@ -33,8 +33,7 @@
     <div class="sixcol last">
       <fieldset>
         <%= f.label "How long should this workout take? *" %>
-        <%= f.text_field :duration, class: "c-field" %>
-        <div class="c-hint a-hint">Example: 30mins or 1hr 30mins</div>
+        <%= f.text_field :duration %>
       </fieldset>
     </div>
   </div>

@@ -4,17 +4,14 @@
     <%= render "shared/meta_tags" %>
     <!-- <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script> -->
     <!-- <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/blazecss/latest/blaze.min.css">
   </head>
   <body>
-    <div id="background">
-      <div class="container">
-        <%= render "shared/header" %>
-      </div>
-      <%= render "shared/flashes" %>
-      <div class="container--content">
-        <%= yield %>
-      </div>
+    <div class="container">
+      <%= render "shared/header" %>
+    </div>
+    <%= render "shared/flashes" %>
+    <div>
+      <%= yield %>
     </div>
   </body>
 </html>

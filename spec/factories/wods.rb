@@ -11,6 +11,7 @@
 #  title        :string
 #  workout_date :string
 #  pub_status   :string
+#  start_time   :datetime
 #
 
 FactoryGirl.define do

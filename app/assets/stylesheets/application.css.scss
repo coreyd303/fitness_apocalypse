@@ -23,8 +23,9 @@
 
 @import "bourbon";
 @import "neat";
-@import "partials/grid_settings";
+@import "bootstrap";
 
+@import "partials/grid_settings";
 @import "partials/vars";
 @import "partials/normalize";
 @import "partials/base";
@@ -36,9 +37,9 @@
 @import "partials/errors";
 
 @import "components/nav";
+@import "components/calendar";
 
 @import "pages/home";
 @import "pages/blog";
 @import "pages/dashboard";
-
-@import "bootstrap";
+@import "pages/wods";
