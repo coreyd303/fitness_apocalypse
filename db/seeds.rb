@@ -23,7 +23,7 @@ end
 
 u = User.find_by(email: "coreyd303@gmail.com")
 unless u.blank?
-  u.has_role?(:admin) ? break : u.add_role(:admin)
+  u.add_role(:admin) if u.has_role?(:admin) == false
 end
 
 if u.confirmed_at.nil?
