@@ -3,9 +3,11 @@
   blog_current = current_page(blog_posts_path)
   home_current = current_page(root_path)
   login_current = current_page(login_path)
-  admin_current = current_page(admin_dashboard_index_path) || current_page(admin_blog_posts_path) || (admin_root_path)
+  admin_current = current_page(admin_dashboard_index_path) ||
+                  current_page(admin_blog_posts_path) ||
+                  current_page(admin_root_path) ||
+                  current_page(admin_wods_index_path)
 %>
-
 
 <div class="container--nav__bar">
   <div class="row">
@@ -36,10 +38,9 @@
       <% else %>
         <%= link_to "SIGNIN / REGISTER", login_path, class: "nav__link #{login_current}" %>
       <% end %>
-
-      <%= link_to "ADMIN", admin_dashboard_index_path, class: "nav__link" %>
-
-
+      <% if current_user && current_user.has_role?(:admin) %>
+        <%= link_to "ADMIN", admin_dashboard_index_path, class: "nav__link #{admin_current}" %>
+      <% end %>
     </div>
   </div>
 </div>

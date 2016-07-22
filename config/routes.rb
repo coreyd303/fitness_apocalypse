@@ -7,12 +7,16 @@ Rails.application.routes.draw do
 
   resources :events, only: [:index, :show]
   resources :blog_posts, only: [:index, :show]
-  resources :wods, only: :show
+
+  resources :wods, only: [:index, :show]
 
   namespace :admin do
     root 'dashboard#index'
-    resources :dashboard
+    resources :dashboard, only: :index
+      get 'dashboard/wods_index', to: 'dashboard#wods_index', as: :wods_index
+
+
     resources :blog_posts, except: :destroy
-    resources :wods, except: :destroy
+    resources :wods, except: [:show, :destroy]
   end
 end

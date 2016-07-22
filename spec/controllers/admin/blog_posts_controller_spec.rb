@@ -56,14 +56,16 @@ describe Admin::BlogPostsController do
       { title:  "Blog oh blog",
         summary:  "Basically it's basic",
         user_id: @user.id,
-        body: "Hey boooooooody!" }
+        body: "Hey boooooooody!",
+        pub_status: "P" }
     end
 
     let(:invalid_attributes) do
       { title: nil,
         summary:  nil,
         user_id: nil,
-        body: "" }
+        body: "",
+        pub_status: "" }
     end
 
     context "with valid params" do
@@ -73,7 +75,7 @@ describe Admin::BlogPostsController do
         end.to change(BlogPost, :count).by(1)
       end
 
-      it "assigns newly created course as @course" do
+      it "assigns newly created course as @blog_post" do
         post :create, { blog_post: valid_attributes }
         expect(assigns(:blog_post)).to be_a(BlogPost)
         expect(assigns(:blog_post)).to be_persisted

@@ -1,3 +1,11 @@
 <div class="container">
-  <h1>EVENTS</h1>
+  <%= month_calendar events: @wods do |date, wods| %>
+    <%= date.strftime("%d") %>
+
+    <% wods.each do |wod| %>
+      <div class="calendar--link">
+        <%= link_to wod.title, wod_path(wod) %>
+      </div>
+    <% end %>
+  <% end %>
 </div>

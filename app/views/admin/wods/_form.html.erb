@@ -1,0 +1,52 @@
+<%= form_for [:admin, @wod] do |f| %>
+  <div class="row">
+    <fieldset>
+      <%= f.label "Name this workout *" %>
+      <%= f.text_field :title, class: "c-field" %>
+    </fieldset>
+  </div>
+
+  <div class="row">
+    <div class="sixcol">
+      <fieldset>
+        <%= f.label "Select what type of workout this is? *" %>
+        <%= f.select :workout_type, options_for_select(Wod::WORKOUT_TYPES) %>
+      </fieldset>
+    </div>
+
+    <div class="sixcol last">
+      <fieldset>
+        <%= f.label "Select a Pub Status for this workout *" %>
+        <%= f.select :pub_status, options_for_select(Constant::PUB_OPTIONS) %>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="sixcol">
+      <fieldset>
+        <%= f.label "What date should this WOD appear on? *" %>
+        <%= f.text_field :workout_date, 'data-provide' => 'datepicker' %>
+      </fieldset>
+    </div>
+
+    <div class="sixcol last">
+      <fieldset>
+        <%= f.label "How long should this workout take? *" %>
+        <%= f.text_field :duration %>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="row">
+    <fieldset>
+      <%= f.label "Give the details of the workout *" %>
+      <p class="note">Don't forget to include levels, and equipment that is needed!</p>
+      <%= f.cktext_area :workout %>
+    </fieldset>
+  </div>
+
+  <div class="row">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

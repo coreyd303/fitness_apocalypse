@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712185912) do
+ActiveRecord::Schema.define(version: 20160719231205) do
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
@@ -40,6 +40,19 @@ ActiveRecord::Schema.define(version: 20160712185912) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
+  create_table "profiles", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "age"
+    t.integer  "yearshunting"
+    t.string   "huntingstyle"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -50,18 +63,6 @@ ActiveRecord::Schema.define(version: 20160712185912) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
-
-ActiveRecord::Schema.define(version: 20160712034910) do
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.integer  "age"
-    t.integer  "yearshunting"
-    t.string   "huntingstyle"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -93,12 +94,15 @@ ActiveRecord::Schema.define(version: 20160712034910) do
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
 
   create_table "wods", force: :cascade do |t|
-    t.string   "title"
-    t.string   "wod_type"
-    t.text     "body"
-    t.string   "notes"
+    t.string   "duration"
+    t.string   "workout_type"
+    t.text     "workout"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "workout_date"
+    t.string   "pub_status"
+    t.datetime "start_time"
   end
 
 end

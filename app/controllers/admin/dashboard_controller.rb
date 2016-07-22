@@ -7,6 +7,7 @@ module Admin
 
     def wods_index
       @wods = Wod.all
+      render "admin/wods/index", layout: "admin/dashboard_base"
     end
   end
 end
