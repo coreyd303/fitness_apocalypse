@@ -78,11 +78,12 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # For emailing with Heroku/Sendgrid & predatorcamp.com domain
+  # Changed domain from heroku.com to www.predatorcamp.com
   config.action_mailer.default_url_options = { :host => 'predatorcamp.herokuapp.com'}
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'heroku.com',
+    :domain => 'www.predatorcamp.com',
     :address => 'smtp.sendgrid.net',
     :port => 25,
     :authentication => :plain,
