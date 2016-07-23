@@ -4,12 +4,25 @@
   <%= form_for @profile do |f| %>
     <div class="form-group">
       <%= f.label :firstname %>
-      <%= f.text_field :firstname, class: 'form-control' %>
+      <%= f.text_field :firstname, class: 'form-control', placeholder: "Required" %>
     </div>
     <div class="form-group">
       <%= f.label :lastname %>
-      <%= f.text_field :lastname, class: 'form-control' %>
+      <%= f.text_field :lastname, class: 'form-control', placeholder: "Required" %>
     </div>
-
+    <div class="form-group">
+      <%= f.label :age %>
+      <%= f.text_field :age, class: 'form-control', placeholder: "Required" %>
+    </div>
+    <div class="form-group">
+      <%-# this should be a dropdown of numbers-%>
+      <%= f.label "Years Hunting" %>
+      <%= f.text_field :yearshunting, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%-# this needs to be a dropdown of constants -%>
+      <%= f.label "Hunting Style" %>
+      <%= f.text_field :huntingstyle, class: 'form-control' %>
+    </div>
   <% end %>
 </div>
