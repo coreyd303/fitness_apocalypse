@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require masonry/jquery.masonry
+//= require bootstrap
+//= require bootstrap-datepicker
 //= require_tree .

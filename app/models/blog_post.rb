@@ -9,12 +9,14 @@
 #  summary    :string
 #  created_at :datetime
 #  updated_at :datetime
+#  pub_status :string
+#  featured   :boolean
 #
 
 class BlogPost < ActiveRecord::Base
   belongs_to :user
 
-  validates :title, :summary, :body, presence: :true
+  validates :title, :summary, :body, :pub_status, presence: :true
 
   def author
     if user.try(:profile)

@@ -1,0 +1,33 @@
+.wod--container {
+  width: 60%;
+  border: 3px solid $ocean-blue;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.wod--container__detail {
+  padding-left: 1em;
+}
+
+.wod--title {
+  color: $super-blue;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px solid $ocean-blue;
+  width: 95%;
+  margin-bottom: 0.2em;
+
+}
+
+.wod--detail__date {
+  color: $purple-grey;
+  margin-bottom: 0;
+}
+
+.wod--detail__duration {
+  color: $black;
+}
+
+.wod--body {
+  color: $black;
+}

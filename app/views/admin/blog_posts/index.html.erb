@@ -1,5 +1,4 @@
 <div class="container">
-<%= link_to "New Post", new_admin_blog_post_path, class: "btn" %>
   <ul>
     <% @posts.each do |post| %>
       <li><%= link_to post.title, edit_admin_blog_post_path(post) %></li>

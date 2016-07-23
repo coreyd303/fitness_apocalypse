@@ -4,13 +4,14 @@
 }
 
 body {
-  color: $white;
+  color: $black;
   padding: 0;
   margin: 0;
+  // overflow: scroll !important;
 }
 
 #background {
-    position: fixed;
+    // position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,7 +26,7 @@ body {
 }
 
 #background--admin {
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   width: 100%;

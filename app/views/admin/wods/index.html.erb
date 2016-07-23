@@ -1,0 +1,7 @@
+<div class="container">
+  <ul>
+    <% @wods.each do |wod| %>
+      <li><%= link_to wod.title, edit_admin_wod_path(wod) %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,16 +1,31 @@
+# == Schema Information
+#
+# Table name: profiles
+#
+#  id           :integer          not null, primary key
+#  firstname    :string
+#  lastname     :string
+#  age          :integer
+#  yearshunting :integer
+#  huntingstyle :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  user_id      :integer
+#
+
 require 'rails_helper'
 
 RSpec.describe Profile, type: :model do
 
   before(:each) do
-    @profile_a = FactoryGirl.build(:profile)
+    user = FactoryGirl.create(:user)
+    @profile_a = FactoryGirl.build(:profile, user_id: user.id)
     @profile_b = FactoryGirl.build(:profile, user_id: nil)
   end
 
   describe "testing associations" do
     it "is valid with user" do
       expect(@profile_a).to be_valid
-    p @profile_a
     end
   end
 
