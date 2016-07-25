@@ -24,9 +24,9 @@ end
 u = User.find_by(email: "coreyd303@gmail.com")
 unless u.blank?
   u.add_role(:admin) if u.has_role?(:admin) == false
-end
 
-if u.confirmed_at.nil?
-  u.confirmed_at = Time.zone.now
-  u.save
+  if u.confirmed_at.nil?
+    u.confirmed_at = Time.zone.now
+    u.save
+  end
 end
