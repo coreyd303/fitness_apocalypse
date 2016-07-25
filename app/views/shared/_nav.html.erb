@@ -1,7 +1,7 @@
 <%
   events_current = current_page(events_path)
   blog_current = current_page(blog_posts_path)
-  home_current = current_page(root_path) || current_page(home_index_path)
+  home_current = current_page(root_path)
   login_current = current_page(login_path)
   admin_current = current_page(admin_dashboard_index_path) ||
                   current_page(admin_blog_posts_path) ||
