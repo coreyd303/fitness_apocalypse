@@ -31,7 +31,7 @@ class Wod < ActiveRecord::Base
       year = date.last(4)
       date.slice!(5..10)
       new_date = year + "-" + date
-      self.start_time = new_date.to_datetime
+      self.start_time = new_date.to_date
     end
   end
 end

@@ -1,11 +1,10 @@
-<% if current_user && @wod %>
+<% if current_user %>
   <div class="container--daily__wod">
-    <p class="title"><%= @wod.title %></p>
-    <p><%= @wod.workout %>
-  </div>
-<% elsif current_user && @rest %>
-  <div class="container--daily__wod">
-    <p class="title"><%= @rest %>
+    <% if @wod.try(:title).nil? %>
+      <p class="title"><%= @wod %></p>
+    <% else %>
+      <p class="title">Today's WOD: <%= link_to @wod.title, wod_path(@wod) %></p>
+    <% end %>
   </div>
 <% end %>
 <div class="container--home__logo">
