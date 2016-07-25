@@ -1,7 +1,7 @@
 <%
   events_current = current_page(events_path)
   blog_current = current_page(blog_posts_path)
-  home_current = current_page(root_path)
+  home_current = current_page(root_path) || current_page(home_index_path)
   login_current = current_page(login_path)
   admin_current = current_page(admin_dashboard_index_path) ||
                   current_page(admin_blog_posts_path) ||
@@ -26,11 +26,11 @@
     </div>
     <div class="eightcol container--nav__links last">
 
-      <% if current_user %>
+      <%# if current_user %>
         <%= link_to "CALENDAR", events_path, class: "nav__link #{events_current}" %>
-      <% else %>
-        <%= link_to "HOME", root_path, class: "nav__link #{home_current}" %>
-      <% end %>
+      <%# else %>
+        <%#= link_to "HOME", root_path, class: "nav__link #{home_current}" %>
+      <%# end %>
       <%= link_to "BLOG", blog_posts_path, class: "nav__link #{blog_current}" %>
       <%= link_to "PROFILE", "#", class: "nav__link" %>
       <% if current_user %>
