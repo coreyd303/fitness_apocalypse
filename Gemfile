@@ -63,6 +63,8 @@ gem "simple_calendar", "~> 2.0"
 # integrate chosen library
 # gem 'select2-rails'
 
+gem 'rails_12factor'
+
 group :development do
   gem 'rubocop', require: false
   gem 'brakeman', require: false
