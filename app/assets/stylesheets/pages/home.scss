@@ -3,6 +3,41 @@
   width: auto;
 }
 
+.wolf__trees {
+  background: image-url('trees.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-size: 50%;
+  background-position: center;
+  // background-attachment: fixed;
+  margin-top: 3em;
+
+  //Prevent blurriness with translateY centering
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 1em;
+  border-radius: 50%;
+
+}
+
+.wolf__circle {
+  // background: rgba(255,255,255,0.4);
+  background: rgba(21,23,166,0.4);
+  box-shadow: 0 0 5px 10px rgba(21,23,166,0.4);
+  border-radius: 50%;
+  width: 26%;
+  padding: 2em;
+  margin: auto;
+}
+
+.wolf__elks {
+  // border: 1px solid $white;
+  // border-radius: 5px;
+  // height: auto;
+  // width: 100px;
+}
+
 .container--home__logo {
   display: block;
   text-align: center;
