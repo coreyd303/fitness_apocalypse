@@ -39,7 +39,7 @@ module Admin
     private
 
     def wod_params
-      params.require(:wod).permit(:title, :pub_status, :workout_date, :duration, :workout_type, :workout, :start_time)
+      params.require(:wod).permit(:pub_status, :workout_date, :duration, :workout_type, :workout, :start_time)
     end
 
 

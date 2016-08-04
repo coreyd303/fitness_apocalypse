@@ -1,7 +1,9 @@
 <div class="container">
   <ul>
     <% @wods.each do |wod| %>
-      <li><%= link_to wod.title, edit_admin_wod_path(wod) %></li>
+      <%= link_to edit_admin_wod_path(wod) do %>
+        <li><%= wod.workout_type%>: <%= wod.workout_date %></li>
+      <% end %>
     <% end %>
   </ul>
 </div>

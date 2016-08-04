@@ -4,7 +4,7 @@
 
     <% wods.each do |wod| %>
       <div class="calendar--link">
-        <%= link_to wod.title, wod_path(wod) %>
+        <%= link_to wod.workout_type.upcase, wod_path(wod) %>
       </div>
     <% end %>
   <% end %>
